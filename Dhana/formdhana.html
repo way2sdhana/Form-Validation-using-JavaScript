@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhana</title>
+    <link rel="stylesheet" href="formdhana.css">
+    <script src="formdhana.js"></script>
+</head>
+<body onload="document.getElementById('update').disabled = true;">
+    <img src="/img/bgbody.jpg" alt="bgimage" style="height: 100vh;">
+    <!-- **********************form********************** -->
+    <form action="#myhotel" method="#post" autocomplete="off">
+        <div>
+            <h1>Hotel Booking (NOV - 2022)</h1>
+        </div>
+        <br><hr style="color: whitesmoke;"><br>
+    <!-- ********************names******************** -->
+        <div class="names">
+            <!-- <label for="Name" id="name">Name <span>*</span></label> -->
+            <label for="Name">Name</label>
+            <input type="text" id="fname" placeholder="firstname*" autofocus>
+            <input type="text" id="lname" placeholder="lastname">
+            <p id="err-msg1" class="err-msg"></p>
+        </div>
+    <!-- ********************e-mail******************** -->
+        <div class="e-mail">
+            <label for="Email">E-mail</label>
+            <input type="text" id="email" placeholder="ex: someone@example.com">
+            <p id="err-msg2" class="err-msg"></p>
+        </div>
+    <!-- *****************type of room****************** -->
+        <div class="rtype">
+            <label for="roomtype">Room Type</label>
+            <select id="roomtype" name="roomtype">
+                <option value="select">Please Select</option>
+                <option value="standard">Standard Room (1 to 2 People)</option>
+                <option value="family">Family Room (1 to 4 People)</option>
+                <option value="private">Private Room (1 to 3 People)</option>
+                <option value="mixdorm">Mix Dorm Room (6 People)</option>
+                <option value="femaledorm">Female Dorm Room (6 People)</option>
+                <option value="maledorm">Male Dorm Room (6 People)</option>
+            </select>
+            <p id="err-msg3" class="err-msg"></p>
+        </div>
+    <!-- ********************guests******************** -->
+        <div class="guests">
+            <label for="guest">Number of Guests</label>
+            <input type="number" id="guest" name="guest" min="0" max="10"> <br>
+            <!-- <input type="range" id="guest" name="guest" min="0" max="50"> -->
+            <p id="err-msg4" class="err-msg"></p>
+        </div>
+    <!-- ********************arrival******************** -->
+        <div class="arriv">
+            <label for="arrival">Arrival Date</label>
+            <!-- <input type="datetime-local" id="arrival" name="arrival"> <br> -->
+            <input type="date" id="arrival" name="arrival" min="2022-11-01" max="2022-11-30"> <br>
+            <p id="err-msg5" class="err-msg"></p>
+        </div>
+    <!-- *******************departure******************* -->
+        <div class="depart">
+            <label for="departure">Departure Date</label>
+            <input type="date" id="departure" name="departure" min="2022-11-01" max="2022-11-30"> <br>
+            <p id="err-msg6" class="err-msg"></p>
+            <!-- <p id="err-msg66" class="err-msg"></p> -->
+        </div>
+    <!-- ********************pickup******************** -->
+        <div class="pickups">
+            <label for="pickup">Free Pickup?</label>
+            <input type="radio" id="yes" name="pickup" value="Yes">
+            <label for="yes">Yes Please! - Pick me up on arrival</label><br>
+            <input type="radio" id="no" name="pickup" value="No">
+            <label for="no">No Thanks - I'll make my own way there</label><br>
+            <p id="err-msg7" class="err-msg"></p>
+        </div>
+    <!-- ********************tele no.******************** -->
+        <div class="tel-number">
+            <label for="tnumber">Mobile Number</label>
+            <!-- <input type="tel" id="tnumber"> -->
+            <input type="tel" id="tnumber" name="tnumber" placeholder="9876543210"> <br>
+            <p id="err-msg8" class="err-msg"></p>
+        </div>
+    <!-- ********************flight******************** -->
+        <div class="flight">
+            <label for="fnumber">Flight Number</label>
+            <input type="text" id="fnumber" placeholder="ex: IN8"> <br>
+            <p id="err-msg9" class="err-msg"></p>
+        </div>    
+    <!-- ********************request******************** -->
+        <div class="Request">
+            <label for="Request">Special Request</label>
+            <textarea name="spl-req" id="spl-req" rows="4"></textarea>
+            <p id="err-msg10" class="err-msg"></p>
+        </div>
+    <!-- *************** terms&conditions *************** -->
+        <div class="terms">
+            <input type="checkbox" id="tercond" name="conditions" value="terms" onclick="myshow()">
+            <label for="tercond" style="width: auto;">I accept the Terms and Conditions</label>
+        </div>
+        <!-- <h2 id="err-msg11" style="padding-left: 100px;"></h2> -->
+    <!-- ********************submit******************** -->
+        <div class="submit">
+            <!-- <input type="reset" onclick="window.location.reload()" value="new"> -->
+            <input type="button" onclick="myReset()" value="new">
+            <input type="button" onclick="myForm()" value="submit">
+            <!-- <input type="button" onclick="alert('your booking is confirmed...')" value="update"> -->
+            <input type="button" onclick="myupdate()" id="update" value="update">
+        </div>
+    </form>
+    <!-- <script>
+        function myshow() {
+            let terms = document.getElementById("tercond");
+            if (!terms.checked) {
+                document.getElementById("update").disabled = true;
+            }
+            else{
+                document.getElementById("update").disabled = false;
+            }
+        }
+    </script> -->
+</body>
+</html>
