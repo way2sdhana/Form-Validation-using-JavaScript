@@ -3,15 +3,18 @@
     margin: 0 ;
     outline: none;
 }
+
 img{
     width: 98vw;
     height: 100vh;
     position: absolute;
     z-index: -1;
 }
+
 span{
     color: red;
 }
+
 h1{
     text-align: center;
     background-color: #ddd;
@@ -20,11 +23,13 @@ h1{
     padding: 20px 0px;
     box-shadow: 0px 8px 17px 0px rgba(0, 0, 0, 0.8);
 }
+
 div:hover{
     /* background-color: lightslategrey; */
     background-color: darkkhaki;
     border-radius: 8px;
 }
+
 form{
     float: right;
     width: 41%; /* width: 45%; for NSchool */
@@ -40,6 +45,7 @@ form{
     /* filter: grayscale(100%); */
     /* background-attachment: fixed; */
 }
+
 form input[type=text],input[type=email], select, textarea{
     width: 140px;
     margin-top: 5px;
@@ -49,6 +55,7 @@ form input[type=text],input[type=email], select, textarea{
     /* transition: 1s; */
     /* transition: width 0.4s ease-in-out; ---------- at :focus */
 }
+
 form label{
     display: inline-block;
     width: 140px;
@@ -148,9 +155,6 @@ input[type=checkbox]{
     accent-color: lightgreen;
 }
 
-/* h2{
-
-} */
 .submit{
     margin-top: 10px;
     padding: 10px 0px;
@@ -163,7 +167,6 @@ input[type=checkbox]{
     margin: 5px 0px 5px 73px;
     font-size: 18px;
     font-family: 'Times New Roman';
-
 }
 
 .submit input:focus{
@@ -184,5 +187,3 @@ input[type=checkbox]{
     color: red;
     background-color: ghostwhite;
 }
-
-
