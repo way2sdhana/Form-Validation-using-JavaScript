@@ -2,10 +2,10 @@
 function myshow() {
     let terms = document.getElementById("tercond");
     if (!terms.checked) {
-        document.getElementById("update").disabled = true;
+        document.getElementById("toSave").disabled = true;
     }
     else {
-        document.getElementById("update").disabled = false;
+        document.getElementById("toSave").disabled = false;
     }
 }
 
@@ -45,7 +45,7 @@ function myForm() {
     // let checked = document.querySelector('input[id="tercond"]:checked');
 
     /********** Regular Expressions **********/
-    let namerule =  /^[a-z]+$/i;
+    let namerule =  /^[a-z]{3,}$/i;
     let emailrule = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+\@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]*$/;
     let flightrule = /^[a-zA-Z]{2,}[0-9]{1,}$/;
     // let emailrule = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -57,7 +57,7 @@ function myForm() {
         alert("Oops! Please check the Terms & Conditions checkbox!...");
     }
     else {
-        document.getElementById('update').disabled = false;
+        document.getElementById('toSave').disabled = false;
 
         /*************** names ***************/
         if (ftname.match(namerule) && ((ltname == "") || ltname.match(namerule))) {
